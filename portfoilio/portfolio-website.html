@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta name="description" content="Aryan Khatri's portfolio - Machine Learning, Data Science, Web Projects">
+ <meta name="author" content="Aryan Khatri">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Aryan's Portfolio</title>
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+ <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+ <style>
+ /* Global Styles */
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+
+ body {
+ background-color: #1A1A1A;
+ color: #FFFFFF;
+ font-family: 'Poppins', sans-serif;
+ line-height: 1.6;
+ }
+ a {
+ text-decoration: none;
+ color: #F3F324;
+ }
+
+ /* Navbar */
+ nav {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 30px 10%;
+ background-color: #F3F324;
+ color: black;
+ }
+ nav ul {
+ display: flex;
+ }
+ nav ul li {
+ list-style: none;
+ margin: 0 20px;
+ }
+ nav ul li a {
+ color: black;
+ font-weight: 600;
+ transition: color 0.3s;
+ }
+ nav ul li a:hover {
+ color: #1A1A1A;
+ }
+ nav button {
+ padding: 10px 20px;
+ background: black;
+ color: #F3F324;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+ font-weight: 600;
+ }
+ nav button:hover {
+ background: #F3F324;
+ color: black;
+ }
+
+ /* Hero Section */
+ .hero {
+ text-align: center;
+ padding: 100px 10%;
+ background: black;
+ }
+ .hero h1 {
+ font-size: 3rem;
+ margin-bottom: 20px;
+ }
+ .hero .yellow {
+ color: #F3F324;
+ }
+ #element {
+ color: #F3F324;
+ font-size: 1.5rem;
+ }
+
+ /* About Section */
+ .about {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ background-color: #000;
+ padding: 60px 10%;
+ text-align: center;
+ }
+ .about img {
+ background-color: #1A1A1A;
+ border-radius: 50%;
+ width: 500px;
+ height: 450px;
+ margin-bottom: 20px;
+ }
+ /* Skills Section */
+ .skills {
+ padding: 40px 10%;
+ background-color: #1A1A1A;
+ text-align: center;
+ }
+ .skills h2 {
+ font-size: 2rem;
+ margin-bottom: 20px;
+ color: #F3F324;
+ }
+ .skills-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+ gap: 20px;
+ }
+ .skills-grid div {
+ background: #444;
+ padding: 20px;
+ border-radius: 5px;
+ color: white;
+ font-weight: 600;
+ }
+ /* Projects Section */
+ .projects {
+ padding: 40px 10%;
+ text-align: left;
+ background: #1A1A1A;
+ }
+ .projects h2 {
+ font-size: 2rem;
+ margin-bottom: 20px;
+ color: #F3F324;
+ }
+ .projects-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: 20px;
+ }
+ .project {
+ background: #333;
+ padding: 20px;
+ border-radius: 5px;
+ color: white;
+ transition: transform 0.3s;
+ box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+ }
+ .project:hover {
+ transform: translateY(-10px);
+ }
+ /* Contact Section */
+ .contact {
+ padding: 40px 10%;
+ text-align: center;
+ background: #333;
+ }
+ .contact h2 {
+ color: #F3F324;
+ }
+ .contact-form {
+ max-width: 600px;
+ margin: auto;
+ }
+ .contact-form input,
+ .contact-form textarea {
+ width: 100%;
+ padding: 10px;
+ margin-bottom: 10px;
+ border: 1px solid #555;
+ border-radius: 5px;
+ background: #444;
+ color: white;
+ }
+ .contact-form button {
+ padding: 10px 20px;
+ background: #F3F324;
+ border: none;
+ color: black;
+ border-radius: 5px;
+ cursor: pointer;
+ font-weight: 600;
+ }
+ /* Popup */
+ .popup {
+ display: none;
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background: rgba(0, 0, 0, 0.8);
+ justify-content: center;
+ align-items: center;
+ z-index: 1000;
+ }
+ .popup-content {
+ background: #333;
+ padding: 30px;
+ border-radius: 10px;
+ color: white;
+ width: 90%;
+ max-width: 500px;
+ text-align: center;
+ }
+ .popup-content input,
+ .popup-content textarea {
+ width: 90%;
+ margin: 10px 0;
+ padding: 10px;
+ border: none;
+ border-radius: 5px;
+ }
+ .popup-content button {
+ padding: 10px 20px;
+ background: #F3F324;
+ border: none;
+ color: black;
+ border-radius: 5px;
+ cursor: pointer;
+ font-weight: 600;
+ }
+ .popup-content button:hover {
+ background: black;
+ color: #F3F324;
+ }
+ .close-btn {
+ position: absolute;
+ top: 10px;
+ right: 20px;
+ font-size: 1.5rem;
+ color: white;
+ cursor: pointer;
+ }
+ /* Responsive */
+ @media (max-width: 768px) {
+ nav ul {
+ flex-direction: column;
+ text-align: center;
+ }
+ .about, .projects, .contact {
+ padding: 20px 5%;
+ }
+ }
+ </style>
+</head>
+<body>
+ <!-- Navbar -->
+ <nav>
+ <div class="left">Aryan's Portfolio</div>
+ <ul>
+ <li><a href="#about">About</a></li>
+ <li><a href="#skills">Skills</a></li>
+ <li><a href="https://github.com/EHyashu?tab=repositories">Projects</a></li>
+ </ul>
+ <button id="popup-btn">Contact Me</button>
+ </nav>
+
+ <!-- Hero Section -->
+ <section class="hero">
+ <h1>Hello, I'm <span class="yellow">Aryan</span></h1>
+ <p>I am passionate about</p>
+ <span id="element"></span>
+ </section>
+ <!-- About Section -->
+ <section id="about" class="about" data-aos="fade-up">
+ <img src="aI.png" alt="AI">
+ <h2>About Me</h2>
+ <p>Hi, I’m Aryan Khatri from Gurgaon. I’m currently pursuing my B.Tech at Poornima University, where I’m in my second year of engineering. I have a strong interest in machine learning and data science and am passionate about exploring the potential of these fields to drive innovation and solve real-world problems. <a href="resume.pdf"> Resume</a></p>
+ </section>
+ <!-- Skills Section -->
+ <section id="skills" class="skills" data-aos="fade-right">
+ <h2>Skills</h2>
+ <div class="skills-grid">
+ <div>AWS</div>
+ <div>Model evaluation</div>
+ <div>Feature Engineering</div>
+ <div>Scikitlearn</div>
+ <div>Machine Learning</div>
+ <div>Python</div>
+ <div>Pandas</div>
+ <div>Numpy</div>
+ <div>seaborn</div>
+ <div>Matplotlib</div>
+ <!-- Add more skills as needed -->
+ </div>
+ </section>
+ <!-- Projects Section -->
+ <section id="projects" class="projects" data-aos="fade-left">
+ <h2>Projects</h2>
+ <div class="projects-grid">
+ <div class="project">
+ <h3>AI voice assistant</h3>
+ <p>
+ <ul>
+ <li>Built an AI voice assistant from scratch in the first year of engineering</li><br>
+
+ <li>all technical aspects: coding, implementation, and testing</li><br>
+ 
+ <li>Used Python libraries like speech_recognition, pyttsx3, and pyaudio</li><br>
+ 
+ <li>Researched and integrated tools to improve performance and accuracy</li><br>
+ 
+ <li>Gained hands-on experience in real-world AI application development</li><br>
+ 
+ <li>Strengthened Python skills and understanding of voice-based AI systems</li><br>
+ 
+ <li>Showcased initiative and self-learning beyond academic requirements</li><br> 
+ </ul>
+ </p>
+ <a href="https://github.com/EHyashu/ai-voice">View Project</a>
+ </div>
+ <div class="project">
+ <h3>Personal Portfolio Website</h3>
+ <p>
+ <ul>
+ <li>Designed and developed a responsive personal portfolio website</li><br>
+
+ <li>Showcased projects, skills, resume, and contact information</li><br>
+
+ <li>Used HTML, CSS, and JavaScript to build a clean, modern UI</li><br>
+
+ <li>Focused on intuitive navigation and smooth user experience</li><br>
+
+ <li>Ensured mobile responsiveness across different screen sizes</li><br>
+
+ <li>Improved front-end development and web design skills</li><br>
+
+ <li>Gained hands-on experience in UI/UX and layout techniques</li><br>
+ </ul>
+ </p>
+ <a href="https://github.com/EHyashu/protfolio-website#">View Project</a>
+ </div>
+ <div class="project">
+ <h3>AI Interviewer Platform</h3>
+ <p>
+ <ul>
+ <li> Developed an AI-based interviewer that evaluates candidate resumes and conducts mock interviews using NLP techniques.</li><br>
+ <li> Implemented resume parsing and scoring based on skills, experience, and job role relevance.</li><br>
+ <li>Integrated an intelligent Q&A system to simulate interview scenarios and provide real-time feedback.</li><br>
+ <li> Enabled personalized interview preparation with practice questions, performance analysis, and improvement tips.</li><br>
+ <li> Focused on user-friendly design and modular architecture for easy scalability and customization..</li><br>
+ </ul>
+ </p>
+ <a href="https://github.com/EHyashu/protfolio-website#">View Project</a>
+ </div>
+ <div class="project">
+ <h3>Fraud Detection using Machine Learning</h3>
+ <p>
+ <ul>
+ <li> Developed a fraud detection system using Python and Scikit-learn.</li><br>
+ <li> Utilized logistic regression and random forest algorithms to identify fraudulent transactions from financial datasets.</li><br>
+ <li> Focused on data preprocessing, feature selection, and model evaluation (accuracy, precision, recall).</li><br>
+ <li> Gained experience with supervised learning techniques and real-world data handling.</li><br>
+ </ul>
+ </p>
+ <a href="https://github.com/EHyashu/protfolio-website#">View Project</a>
+ <!-- Add more projects as needed -->
+ </div>
+ </section>
+ <!-- Contact Section -->
+ <section id="contact" class="contact" data-aos="zoom-in">
+ <h2>Get in touch with me:</h2>
+ <footer>
+ <p>8595165654 | 
+ <a href="https://mail.google.com/mail/u/0/#inbox">G-Mail</a></p> | 
+ <a href="https://www.linkedin.com/in/aryan-khatri-132418285/">Linked In</a></p>
+ </footer>
+ </section>
+
+ <!-- Popup -->
+ <div id="popup" class="popup">
+ <div class="popup-content">
+ <span class="close-btn">&times;</span>
+ <h2>Contact Me</h2>
+ <form>
+ <input type="text" placeholder="Your Name" required>
+ <input type="email" placeholder="Your Email" required>
+ <textarea rows="5" placeholder="Your Message" required></textarea>
+ <button type="submit">Send Message</button>
+ </form>
+ </div>
+ </div>
+
+ <!-- Scripts -->
+ <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ <script>
+ // Initialize AOS
+ AOS.init();
+
+ // Typed.js Animation
+ var typed = new Typed('#element', {
+ strings: ['Data Science', 'Machine Learning', 'Python', 'DSA', 'CSS', 'HTML'],
+ typeSpeed: 60,
+ });
+
+ // Popup Script
+ const popup = document.getElementById('popup');
+ const popupBtn = document.getElementById('popup-btn');
+ const closeBtn = document.querySelector('.close-btn');
+
+ // Show popup when button is clicked
+ popupBtn.addEventListener('click', () => {
+ popup.style.display = 'flex';
+ });
+
+ // Hide popup when close button is clicked
+ closeBtn.addEventListener('click', () => {
+ popup.style.display = 'none';
+ });
+
+ // Hide popup when clicking outside the popup content
+ popup.addEventListener('click', (e) => {
+ if (e.target === popup) {
+ popup.style.display = 'none';
+ }
+ });
+ </script>
+</body>
+</html>
