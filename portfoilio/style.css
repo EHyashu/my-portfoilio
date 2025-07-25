@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+   
+    body {
+    background-color: #1A1A1A;
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    }
+    a {
+    text-decoration: none;
+    color: #F3F324;
+    }
+   
+    /* Navbar */
+    nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #F3F324;
+    color: black;
+    }
+    nav ul {
+    display: flex;
+    }
+    nav ul li {
+    list-style: none;
+    margin: 0 20px;
+    }
+    nav ul li a {
+    color: black;
+    font-weight: 600;
+    transition: color 0.3s;
+    }
+    nav ul li a:hover {
+    color: #1A1A1A;
+    }
+    nav button {
+    padding: 10px 20px;
+    background: black;
+    color: #F3F324;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    }
+    nav button:hover {
+    background: #F3F324;
+    color: black;
+    }
+   
+    /* Hero Section */
+    .hero {
+    text-align: center;
+    padding: 100px 10%;
+    background: black;
+    }
+    .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    }
+    .hero .yellow {
+    color: #F3F324;
+    }
+    #element {
+    color: #F3F324;
+    font-size: 1.5rem;
+    }
+   
+    /* About Section */
+    .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000;
+    padding: 60px 10%;
+    text-align: center;
+    }
+    .about img {
+    background-color: #1A1A1A;
+    border-radius: 50%;
+    width: 500px;
+    height: 450px;
+    margin-bottom: 20px;
+    }
+    /* Skills Section */
+    .skills {
+    padding: 40px 10%;
+    background-color: #1A1A1A;
+    text-align: center;
+    }
+    .skills h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #F3F324;
+    }
+    .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    }
+    .skills-grid div {
+    background: #444;
+    padding: 20px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    }
+    /* Projects Section */
+    .projects {
+    padding: 40px 10%;
+    text-align: left;
+    background: #1A1A1A;
+    }
+    .projects h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #F3F324;
+    }
+    .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    }
+    .project {
+    background: #333;
+    padding: 20px;
+    border-radius: 5px;
+    color: white;
+    transition: transform 0.3s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .project:hover {
+    transform: translateY(-10px);
+    }
+    /* Contact Section */
+    .contact {
+    padding: 40px 10%;
+    text-align: center;
+    background: #333;
+    }
+    .contact h2 {
+    color: #F3F324;
+    }
+    .contact-form {
+    max-width: 600px;
+    margin: auto;
+    }
+    .contact-form input,
+    .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background: #444;
+    color: white;
+    }
+    .contact-form button {
+    padding: 10px 20px;
+    background: #F3F324;
+    border: none;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    }
+    /* Popup */
+    .popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    }
+    .popup-content {
+    background: #333;
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    }
+    .popup-content input,
+    .popup-content textarea {
+    width: 90%;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    }
+    .popup-content button {
+    padding: 10px 20px;
+    background: #F3F324;
+    border: none;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    }
+    .popup-content button:hover {
+    background: black;
+    color: #F3F324;
+    }
+    .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+    nav ul {
+    flex-direction: column;
+    text-align: center;
+    }
+    .about, .projects, .contact {
+    padding: 20px 5%;
+    }
+    }
