@@ -15,7 +15,7 @@
 </div>
 
 ## 🌐 Live Website
-**View the active deployment here**: [https://my-portfoilio-gamma.vercel.app/](https://my-portfoilio-gamma.vercel.app/)
+**View the active deployment here**:(https://aryan-portfoilio.vercel.app/)
 
 ## 🚀 Overview
 Welcome to my personalized digital portfolio perfectly merging modern neon-gradient aesthetics with ultra-responsive UX. 
