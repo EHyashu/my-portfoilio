@@ -14,6 +14,9 @@
   <img src="https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white" />
 </div>
 
+## 🌐 Live Website
+**View the active deployment here**: [https://my-portfoilio-gamma.vercel.app/](https://my-portfoilio-gamma.vercel.app/)
+
 ## 🚀 Overview
 Welcome to my personalized digital portfolio perfectly merging modern neon-gradient aesthetics with ultra-responsive UX. 
 This portfolio was built purely to act as a blazing-fast, accessible hub representing my journey in **Machine Learning**, **Data Science**, **Cloud Engineering (AWS)**, and **Software Architecture.**
@@ -39,6 +42,9 @@ This project is built directly to integrate perfectly with **Vercel** for contin
 To deploy your own fork instance automatically: 
 1. Link your repo locally using the Vercel CLI, OR 
 2. Go to **vercel.com/new**, authenticate via GitHub, and single-click deploy!
+
+## 📝 License
+This project is open-source and available under the **MIT License**. Feel free to fork and use it as a foundation for your own portfolio!
 
 ---
 <div align="center">
